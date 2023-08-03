@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Sharing Platform</h1>
+    </header>
+
+    <div class="container">
+        <div class="recipe-form">
+            <h2>Add a New Recipe</h2>
+            <form id="recipeForm">
+                <input type="text" id="recipeTitle" placeholder="Recipe Title" required>
+                <textarea id="ingredients" placeholder="Ingredients (separate with commas)" required></textarea>
+                <textarea id="cookingInstructions" placeholder="Cooking Instructions" required></textarea>
+                <input type="number" id="preparationTime" placeholder="Preparation Time (in minutes)" required>
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Recipe...">
+            <button id="searchButton">Search</button>
+        </div>
+        
+        <div class="recipes-list" id="recipesList">
+            <!-- Recipes will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Edit Recipe Modal -->
+    <div id="editRecipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Recipe</h2>
+            <form id="editRecipeForm">
+                <input type="text" id="editRecipeTitle" placeholder="Recipe Title" required>
+                <textarea id="editIngredients" placeholder="Ingredients (separate with commas)" required></textarea>
+                <textarea id="editCookingInstructions" placeholder="Cooking Instructions" required></textarea>
+                <input type="number" id="editPreparationTime" placeholder="Preparation Time (in minutes)" required>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
